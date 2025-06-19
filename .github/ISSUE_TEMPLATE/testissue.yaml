@@ -1,0 +1,43 @@
+name: Org issue
+description: File a bug report.
+title: "[Patch From Tequity]: "
+labels: ["patch", "tequity","backend"]
+assignees:
+  - stjop-avetisyan
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Issue that tequity asked for a patch.
+  - type: dropdown
+    id: project
+    attributes:
+      label: Which Project/s need to patch?
+      description: Select at minimum one project.
+      options:
+        - adapter
+        - rgs
+        - back-office
+        - connector
+        - rng
+        - demo-casino
+        - websocket
+        - promo
+        - shared
+      multiple: true
+    validations:
+      required: true
+  - type: input
+    id: thread-url
+    attributes:
+      label: THREAD URL
+      description: Please provide a link to the thread
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Short description (optional)
+      placeholder: Anything else you want to add?
+    validations:
+      required: false
