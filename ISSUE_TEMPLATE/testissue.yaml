@@ -1,0 +1,43 @@
+name: Test Issue Template
+description: A simple issue form for testing purposes
+title: "[Test]: "
+labels: ["test"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for testing this issue template! Please fill in the fields below.
+
+  - type: input
+    id: summary
+    attributes:
+      label: Summary
+      description: Briefly describe what you're testing.
+      placeholder: "Testing dropdowns, required fields, etc."
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: Detailed Description
+      description: Add any details or observations here.
+      placeholder: "More information about the test scenario..."
+    validations:
+      required: false
+
+  - type: dropdown
+    id: test-type
+    attributes:
+      label: Type of Test
+      description: What kind of behavior are you testing?
+      options:
+        - UI behavior
+        - Form rendering
+        - YAML parsing
+        - Label auto-assignment
+        - Other
+    validations:
+      required: false
