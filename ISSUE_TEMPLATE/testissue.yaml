@@ -1,44 +1,43 @@
-name: Test Issue Template
-description: A simple issue form for testing purposes
-title: "[Test]: "
-labels: ["test"]
-assignees: []
-
+name: CM-Patch From Tequity
+description: File a bug report.
+title: "[Patch From Tequity]: "
+labels: ["patch", "tequity","backend"]
+assignees:
+  - stjop-avetisyan
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for testing this issue template! Please fill in the fields below.
-
-  - type: input
-    id: summary
+        Issue that tequity asked for a patch.
+  - type: dropdown
+    id: project
     attributes:
-      label: Summary
-      description: Briefly describe what you're testing.
-      placeholder: "Testing dropdowns, required fields, etc."
+      label: Which Project/s need to patch?
+      description: Select at minimum one project.
+      options:
+        - adapter
+        - rgs
+        - back-office
+        - connector
+        - rng
+        - demo-casino
+        - websocket
+        - promo
+        - shared
+      multiple: true
     validations:
       required: true
-
-
-  - type: textarea
-    id: details
+  - type: input
+    id: thread-url
     attributes:
-      label: Detailed Description
-      description: Add any details or observations here.
-      placeholder: "More information about the test scenario..."
+      label: THREAD URL
+      description: Please provide a link to the thread
     validations:
-      required: false
-
-  - type: dropdown
-    id: test-type
+      required: true
+  - type: textarea
+    id: description
     attributes:
-      label: Type of Test
-      description: What kind of behavior are you testing?
-      options:
-        - UI behavior
-        - Form rendering
-        - YAML parsing
-        - Label auto-assignment
-        - Other
+      label: Short description (optional)
+      placeholder: Anything else you want to add?
     validations:
       required: false
