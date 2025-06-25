@@ -20,8 +20,11 @@ name: Issue Template Cheat Sheet
 # The description is a string that is no more than 200 characters long
 # that describes the intended use for this template:
 description: This is a cheat sheet for creating issue forms in YAML.
-title: "[Patch From Tequity]: "
-labels: ["patch", "tequity","backend"]
+title: "[CHEAT SHEET]: "
+# The labels are an array or comma-delimited string of labels that will
+# automatically be assigned to this issue:
+# labels must be  defined in all repos
+labels: ["patch", "backend"]
 assignees:
   - stjop-avetisyan
 body:
@@ -81,10 +84,46 @@ body:
         - MacPorts
     validations:
       required: true
+  # INPUT:
+  - type: input
+    id: prevalence
+    attributes:
+      label: Bug prevalence
+      description: "How often do you or others encounter this bug?"
+      placeholder: "Whenever I visit the user account page."
+    validations:
+      required: false
+  # MARKDOWN:
+  - type: markdown
+    attributes:
+      value: |
+        Issue that tequity asked for a patch.
 
+  # MARKDOWN WITH MULTI-LINE CONTENT:
+  - type: markdown
+    id: markdown_with_multiline_content
+    attributes:
+     value: |
+        ## Welcome!
+        This type of entry can be used to communicate with the user
+        without asking for any input.
+  - type: markdown
+    id: markdown_with_footnotes
+    attributes:
+      value: |
+        This is the first footnote link[^1].
+        This is the second footnote link[^2].
+        This is the third footnote link[^note].
+        [^1]: This is the first footnote.
+        [^2]: This is the second footnote. It's a multi-line footnote.
+          Newlines should be indented with 2 spaces.
+        [^note]: This is the third footnote. It's a named footnote that
+          renders with numbers just like simple footnotes do, but the
+          name allows for easier identification and linking. 
+     
+     
 
-
-
+###################################################
   - type: input
     id: thread-url
     attributes:
