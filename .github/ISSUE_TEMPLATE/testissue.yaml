@@ -20,44 +20,38 @@ name: Issue Template Cheat Sheet
 # The description is a string that is no more than 200 characters long
 # that describes the intended use for this template:
 description: This is a cheat sheet for creating issue forms in YAML.
-title: "[Patch From Tequity]: "
-labels: ["patch", "tequity","backend"]
+title: Issue Template Cheat Sheet
+# The labels are an array or comma-delimited string of labels that will
+# automatically be assigned to this issue:
+labels: new
+# The assignees are an array or comma-delimited string of users the
+# issue will be automatically assigned to:
 assignees:
   - stjop-avetisyan
+# The body is an array that defines user inputs:
 body:
-  - type: markdown
+  # YOUR YAML HERE, INDENTED BY 2 SPACES SO THAT IT'S PART OF THE BODY.
+  ######################################################################
+  # NATIVE DATA STRUCTURES                                             #
+  ######################################################################
+  # YAML represents any native data structure using three node kinds:  #
+  # sequence (an ordered series of entries)                            #
+  # mapping (an unordered association of unique keys to values)        #
+  # scalar (any datum with opaque structure presentable as a series of #
+  #         Unicode characters)                                        #
+  ######################################################################
+  # SOME EXAMPLES:
+
+  # CHECKBOX:
+  - type: checkboxes
+    id: checkboxes
     attributes:
-      value: |
-        Issue that tequity asked for a patch.
-  - type: dropdown
-    id: project
-    attributes:
-      label: Which Project/s need to patch?
-      description: Select at minimum one project.
+      label: What kinds of M&Ms do you like?
+      description: You may select more than one.
       options:
-        - adapter
-        - rgs
-        - back-office
-        - connector
-        - rng
-        - demo-casino
-        - websocket
-        - promo
-        - shared
-      multiple: true
-    validations:
-      required: true
-  - type: input
-    id: thread-url
-    attributes:
-      label: THREAD URL
-      description: Please provide a link to the thread
-    validations:
-      required: true
-  - type: textarea
-    id: description
-    attributes:
-      label: Short description (optional)
-      placeholder: Anything else you want to add?
-    validations:
-      required: false
+        - label: Green
+        - label: Orange
+        - label: Red
+        - label: Yellow
+      validations:
+        required: false
