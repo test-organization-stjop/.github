@@ -161,7 +161,163 @@ body:
         | one | two | three |
     validations:
       required: false
-     
+  # TEXTAREA:
+  - type: textarea
+    id: textarea
+    attributes:
+      label: My text
+      description: "Which version of the software did you use?"
+    validations:
+      required: false
+
+  # TEXTAREA PREPOPULATED WITH CONTENTS:
+  - type: textarea
+    id: textarea_prepopulated_with_contents
+    attributes:
+      label: Textarea prepopulated with contents
+      description: "How do you trigger this bug?"
+      value: |
+        1. Do this.
+        2. Then do that.
+        3. Then do the other.
+    validations:
+      required: false
+
+  # TEXTAREA WITH A PLACEHOLDER:
+  - type: textarea
+    id: textarea_with_a_placeholder
+    attributes:
+      label: Textarea with a placeholder
+      description: "How do you trigger this bug?"
+      placeholder: |
+        1. Do this.
+        2. Then do that.
+        3. Then do the other.
+    validations:
+      required: false
+
+  # TEXTAREA RENDERED WITH LANGUAGES:
+  # If a render value is provided, submitted text will be formatted in a
+  # code block and the textarea will not expand for file attachments or
+  # Markdown editing. The available languages known to GitHub:
+  # https://github.com/github/linguist/blob/master/lib/linguist/languages.yml
+
+  # TEXTAREA RENDERED WITH BASH:
+  - type: textarea
+    id: textarea_rendered_with_bash
+    attributes:
+      label: Textarea rendered with Bash
+      description: |
+        Please provide some example command output:
+      render: bash
+    validations:
+      required: false
+
+  # TEXTAREA RENDERED WITH CSS:
+  - type: textarea
+    id: textarea_rendered_with_CSS
+    attributes:
+      label: Textarea rendered with CSS
+      description: |
+        Please provide some example CSS:
+      render: CSS
+    validations:
+      required: false
+
+  # TEXTAREA RENDERED WITH INI:
+  - type: textarea
+    id: textarea_rendered_with_ini
+    attributes:
+      label: Textarea rendered with ini
+      description: |
+        Please provide some example ini:
+      render: ini
+    validations:
+      required: false
+
+  # TEXTAREA RENDERED WITH MARKDOWN:
+  - type: textarea
+    id: textarea_rendered_with_markdown
+    attributes:
+      label: Textarea rendered with Markdown
+      description: "Please provide some example Markdown:"
+      render: markdown
+    validations:
+      required: false
+
+  # TEXTAREA RENDERED WITH MARKDOWN AND PREPOPULATED WITH CONTENTS:
+  - type: textarea
+    id: textarea_rendered_with_markdown_and_prepopulated_with_contents
+    attributes:
+      label: Textarea rendered with Markdown and prepopulated contents
+      description: "How do you trigger this bug?"
+      value: |
+        ## Steps:
+        1. Do this.
+        2. Then do that.
+        3. Then do the other.
+      render: markdown
+    validations:
+      required: false
+
+  # TEXTAREA RENDERED WITH MARKDOWN WITH A PLACEHOLDER:
+  - type: textarea
+    id: textarea_rendered_with_markdown_with_a_placeholder
+    attributes:
+      label: Textarea rendered with Markdown with a placeholder
+      description: "How do you trigger this bug?"
+      placeholder: |
+        ## Steps:
+        1. Do this.
+        2. Then do that.
+        3. Then do the other.
+      render: markdown
+    validations:
+      required: false
+
+  # TEXTAREA RENDERED WITH SHELL:
+  - type: textarea
+    id: textarea_rendered_with_shell
+    attributes:
+      label: Textarea rendered with shell
+      description: >
+        Please provide some example command output:
+      render: shell # shouldn't this be sh instead?
+    validations:
+      required: false
+
+  # TEXTAREA RENDERED WITH TXT:
+  - type: textarea
+    id: textarea_rendered_with_txt
+    attributes:
+      label: Example text snippet
+      description: |
+        Please provide some example text:
+      render: txt
+    validations:
+      required: false
+
+  # TEXTAREA RENDERED WITH XML:
+  - type: textarea
+    id: textarea_rendered_with_xml
+    attributes:
+      label: Example XML
+      description: |
+        Please provide some example XML:
+      render: xml
+    validations:
+      required: false
+
+  # TEXTAREA RENDERED WITH YAML:
+  - type: textarea
+    id: textarea_rendered_with_yaml
+    attributes:
+      label: Example YAML snippet
+      description: |
+        Please provide some example YAML:
+      render: yaml
+    validations:
+      required: false
 
 ###################################################
   - type: input
