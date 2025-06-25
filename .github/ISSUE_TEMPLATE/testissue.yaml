@@ -119,8 +119,48 @@ body:
           Newlines should be indented with 2 spaces.
         [^note]: This is the third footnote. It's a named footnote that
           renders with numbers just like simple footnotes do, but the
-          name allows for easier identification and linking. 
-     
+          name allows for easier identification and linking.
+  # MARKDOWN WITH LINK TO ISSUE:
+  - type: markdown
+    id: markdown_with_link_to_issue
+    attributes:
+      value: |
+        You can mention a bug with an explicit link. For example:
+        [test](https://github.com/Elliria/hello-world/issues/2)
+        This short version might also work, but I haven't tested it:
+        [test](Elliria/hello-world#2)
+    validations:
+      required: false
+
+  # MARKDOWN WITH MENTION:
+  - type: markdown
+    id: markdown_with_mention
+    attributes:
+      value: |
+        You can mention a GitHub member with an at symbol followed by
+        their name. For instance, to mention myself, I would use
+        @Elliria.
+    validations:
+      required: false
+
+  # MARKDOWN WITH TABLES:
+  - type: markdown
+    id: markdown_with_tables
+    attributes:
+      value: |
+        | Column 1 Heading  | Column 2 Heading |
+        | ------------- | ------------- |
+        | Column 1 cell  | Column 2 cell  |
+        | Column 1 cell  | Column 2 cell  |
+        | Column 1 cell  | Column 2 cell  |
+
+        | Left-aligned | Center-aligned | Right-aligned |
+        | :---         |     :---:      |          ---: |
+        | one | two | three |
+        | one | two | three |
+        | one | two | three |
+    validations:
+      required: false
      
 
 ###################################################
