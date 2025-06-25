@@ -1,5 +1,25 @@
-name: Org issue
-description: File a bug report.
+########################################################################
+# How to create a YAML issue template form in your repository          #
+########################################################################
+# To use a YAML issue form in your repository, you must create a new
+# file and add it to the .github/ISSUE_TEMPLATE folder in your
+# repository by typing the full path to the new file in when prompted
+# for a new file's name.
+#
+# If, for example, you wanted to create the bug.yaml form to add to your
+# repository, click on the <> Code tab, then click on the "Add file"
+# button, click on "Create new file", and then type this into the window
+# that pops up: .github/ISSUE_TEMPLATE/bug.yaml
+#
+# Note that you won't need to get rid of your Markdown issue template.
+########################################################################
+# Required top-level fields                                            #
+########################################################################
+# The name is a string that's unique across all templates:
+name: Issue Template Cheat Sheet
+# The description is a string that is no more than 200 characters long
+# that describes the intended use for this template:
+description: This is a cheat sheet for creating issue forms in YAML.
 title: "[Patch From Tequity]: "
 labels: ["patch", "tequity","backend"]
 assignees:
